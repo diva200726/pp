@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "nav nav"
+            "aside main"
+            "footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 90px 40px 1fr 60px;
+            height:100vh;
+        }
+
+        .one{
+            text-indent:1cm;
+        }
+
+        header{
+            grid-area: header;
+            text-align:center;
+            background-color: forestgreen;
+            color:rgb(241, 233, 235);
+            padding:5px;
+        }
+
+        footer{
+            grid-area:footer;
+            text-align: center;
+            padding:15px;
+            background-color: black;
+            color:white;
+        }
+
+        main{
+            grid-area:main;
+            text-align: justify;
+            padding:15px;
+            background-color: rgb(239, 230, 230);
+            color:rgb(15, 14, 14);
+        }
+
+        aside{
+            grid-area:aside;
+            padding:15px;
+            background-color: rgb(7, 129, 62);
+            color:white;        
+        }
+
+        h3{
+            text-align:center;
+        } 
+
+        .two{
+            text-align:left;
+            font-variant:small-caps;
+            margin-bottom:10px;
+            color:black;
+        }
+        
+        /* .two{
+            float:center;                
+        } */
+
+         nav{
+            grid-area:nav;
+            padding:5px;
+            background-color: rgb(3, 87, 80);
+        }
+
+        nav ul{
+            list-style-type:none;
+            display:flex;
+            justify-content: center;            
+        }
+        
+        nav ul li{
+            margin:0 35px;
+            
+        }
+
+        nav ul li a{
+            color:white;
+            font-weight:700;
+        }
+
+        aside ul li{
+            margin-bottom:20px;
+        }     
+      
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h2>My Website</h2>
+            <p>
+                Using CSS Grid Layout Display
+            </p>
+
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+        </nav>
+
+        <aside>
+            <h3>Side Bar</h3>
+            <ul class="two">
+                <li>Updates</li>
+                <li>Links</li>
+                <li>Advertisements</li>
+            </ul>
+
+        </aside>
+
+        <main>
+           <p> CSS Grid Layout is a powerful, two-dimensional layout system that allows developers to arrange elements into columns and rows for complex and responsive web designs. </p>
+            <h4>Key Concepts</h4>
+            <h5>Grid Container:</h5> <p class="one">The parent element on which display: grid or display: inline-grid is applied. Its direct children become grid items.</p>
+            <h5>Grid Tracks:</h5> <p class="one">The columns and rows of the grid, defined by grid-template-columns and grid-template-rows properties.</p>
+            <h5>Grid Lines:</h5> <p class="one">The dividing lines that form the grid structure, which can be numbered or named for precise item placement.</p>
+            <h5>Gaps (Gutters):</h5><p class="one">The space between grid tracks, controlled by the gap, row-gap, and column-gap properties.</p>
+            <h5>Fractional Unit (fr):</h5> <p class="one">A flexible length unit unique to Grid that represents a fraction of the available space in the container, enabling highly responsive layouts.</p>        </main>
+        <footer>
+            <p>
+                &copy; 2026 My Website | All Rights Reserved
+            </p>
+        </footer>    
+    </div>
+    
+</body>
+</html>
